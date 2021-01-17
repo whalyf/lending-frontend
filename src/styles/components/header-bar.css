@@ -1,0 +1,18 @@
+.app-header{
+    background: #228A95;
+    max-width: 1920px;
+    height: 59.42px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.app-header .header-icons .menu-link{    
+    margin-left: 20px;
+}
+
+.app-header .header-icons .logo-link{
+    height:40px;
+    display:inline-flex;
+    margin-left: 836px;
+}

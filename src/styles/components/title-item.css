@@ -1,0 +1,25 @@
+.items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 18px;
+}
+
+.items .plus-icon{
+    width: 45px;
+}
+
+.items .folders-icon{
+    height: 115px;
+    width: 115px;
+    margin-left: 18px;
+}
+
+.items label{
+    font-size: 56px;
+    font-weight: bold;
+    color: #228A95;
+    text-align: left;
+    width: 285px;
+    margin-left: 18px;
+}

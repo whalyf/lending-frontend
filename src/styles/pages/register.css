@@ -1,0 +1,81 @@
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form .foward-button{
+    border: none;
+    margin: auto;
+    margin-top: 43px;
+    width: 391px;
+    height: 98px;
+    border-radius: 5px;
+    font-size: 39px;
+    font-weight: bold;
+    background:#228A95;
+    color: #FFF;
+}
+.all-info-card{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+
+.all-info-card .title{
+    display: flex;
+    justify-content: center;
+    font-size: 21px;
+    color: #228A95;
+}
+
+.all-info-card .card-left-data .card-data{
+    display: flex;
+    background: #F8F8F8;
+    border-radius: 5px;
+    width: 472px;
+    height: 74px;
+    border: none;
+    margin-top: 20px;
+}
+
+
+.all-info-card .card-left-data .card-data input{
+    border: none;
+    color: #777777;
+    font: bold 18px italic;
+    margin-left: 18px;
+    background: #F8F8F8;
+}
+
+.all-info-card .card-right-data .card-attachment{
+    display: flex;
+    background: #F8F8F8;
+    border-radius: 5px;
+    width: 472px;
+    height: 74px;
+    border: none;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.all-info-card .card-right-data .card-attachment label{
+    border: none;
+    color: #777777;
+    font: bold 18px italic;
+    margin-left: 18px;
+}
+
+.all-info-card .card-right-data .card-attachment a{
+    margin-right: 18px;
+    font-style: oblique;
+    color: #777777;
+}
+
+.all-info-card .card-right-data .attention{
+    margin-top: 20px;
+    font-size: 21px;
+    color: #228A95;
+    max-width: 472px;
+    display: flex;
+}

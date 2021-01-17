@@ -1,0 +1,45 @@
+.choose-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.choose-items .choose{
+    color: #228A95;
+    font-style: oblique;
+}
+
+.choose-items .credit-card{
+    width: 391px;
+    height: 98px;
+    border: none;
+    border-radius: 5px;
+    font-size: 39px;
+    font-weight: bold;
+    background: #228A95;
+    color: #ffffff;
+}
+
+.choose-items .payroll-loans{
+    width: 391px;
+    height: 98px;
+    border: none;
+    border-radius: 5px;
+    font-size: 39px;
+    font-weight: bold;
+    background: #228A95;
+    color: #ffffff;
+    opacity: 40%;
+}
+
+.choose-items .last-button{
+    display: flex;
+    flex-direction: column;
+}
+
+.choose-items .soon{
+    font-size: 25px;
+    align-items: flex-end;
+    text-align: right;
+}

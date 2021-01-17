@@ -1,0 +1,42 @@
+.input-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 63px;
+    margin-bottom: 95px;
+}
+
+.input-area label{
+    font-size: 40px;
+    color: #228A95;
+    font-weight: bold;
+    margin-bottom: 28px;
+}
+
+.input-area input{
+    width: 473px;
+    height: 61px;
+    font-size: 30px;
+    background: #F8F8F8;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    color: #777777;
+}
+
+.input-area .button{
+    border-radius: 5px;
+    font-size: 22px;
+    width: 160px;
+    height: 53px;
+    background: #EF9C4B;
+    border: none;
+    color:#FFFFFF;
+    font-weight: bold;
+    margin-left: 22px;
+    transition: filter 0.2s;
+}
+
+.input-area .button:hover{
+    filter: brightness(90%);
+}
