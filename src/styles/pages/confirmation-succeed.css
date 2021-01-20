@@ -1,0 +1,88 @@
+h2{
+    font:bold 40px;
+    color: #228A95;
+    text-align: center;
+    margin-top: 52px;
+}
+
+h3{
+    margin-top: 26px;
+    font: normal 28px oblique;
+    color: #228A95;
+}
+
+.all-form .confirms{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 23px;
+}
+
+.all-form .confirm{
+    display: flex;
+    justify-content: space-between;
+    width: 613px;
+    height: 96px;
+    background: #E8FFE4;
+    border-radius: 5px;
+    align-items: center;
+    font: bold 21px italic;
+    color: #777 ;
+}
+.all-form .confirm .label{
+    margin-left: 23px;
+    color: #228A95;
+}
+
+.all-form .confirm .right-confirm{
+    display: flex;
+    margin-right: 23px;
+    align-items: center;
+}
+
+.all-form .confirm .right-confirm label{
+    margin-right: 10px;
+}
+
+.all-form .confirms .confirm .confirm-name,
+.confirm-name-value{
+    color:#777777
+}
+
+.all-form .total{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    margin-top: 23px;
+    margin-bottom: 50px;
+}
+
+.all-form .total .button{
+    background: #228A95;
+    border: none;
+    border-radius: 5px;
+    width: 420px;
+    height: 94px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 36px;
+    margin-top: 18px;
+}
+
+.all-form .total .last-text{
+    margin-top: 20px;
+    font-size: 18px;
+    color:#228A95;
+}
+
+.all-form .confirm-total-value,
+.confirm-intended-value,
+.confirm-quota-total-value{
+    color: #31AC2B;
+}
+
+.all-form .confirm-fee-value,
+.confirm-quota-value{
+    color: #EF9C4B;
+}

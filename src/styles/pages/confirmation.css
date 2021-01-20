@@ -1,0 +1,179 @@
+.head-confirm{
+    position: absolute;
+}
+
+form .all-table-type{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.table{
+    display: flex;
+    width: 472px;
+    height: 97px;
+    background: #F8F8F8;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.table .table-text-left{
+    font: bold 22px italic;
+    color: #228A95;
+    margin-left: 23px;
+}
+
+.table .table-text-right{
+    display: flex;
+    color: #EF9C4B;
+    font: bold 22px italic;
+    width: 296px;
+    height: 62px;
+    background: #FFF;
+    align-items: center;
+    margin-right: 23px;
+}
+
+.fields{
+    display: flex;
+    justify-content: space-between;
+}
+
+.fields .field{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    height: 97px;
+    background: #F8F8F8;
+    border-radius: 5px;
+    margin-bottom: 19px;
+    align-items: center;
+}
+
+.fields .field-left{
+    margin-right: 19px;
+}
+
+.fields .field label{
+    display: flex;
+    font: bold 22px italic;
+    color: #228A95;
+    align-items: center;
+    max-width: 315px;
+}
+
+.fields .field label:nth-last-child(1){
+    color: #EF9C4B;
+    width: 238px;
+    height: 62px;
+    background: #FFF;
+    border-radius: 5px;
+    justify-content: flex-start;
+    margin-right: 23px;
+}
+
+.fields .field label:nth-last-child(2){
+    margin-left: 23px;
+}
+
+.fields .up{
+    background: #E8FFE3;
+}
+
+
+.contract-type{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contract-type .button{
+    border: none;
+    width: 600px;
+    height: 98px;
+    background: #228A95;
+    border-radius: 5px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 39px;
+}
+
+form .contract-type .button-select {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 600px;
+  }
+  
+form .contract-type .button-select button {
+    height: 98px;
+    background: #F5F8FA;
+    border: 1px solid #D3E2E5;
+    color: #228A95;
+    cursor: pointer;
+    font-size: 39px;
+    font-weight: bold;
+    border: none;
+}
+  
+form .contract-type .button-select button.active {
+    background: #228A95;
+    color: #FFF;
+}
+  
+form .contract-type .button-select button:first-child {
+    border-radius: 5px 0px 0px 5px;
+}
+  
+form .contract-type .button-select button:last-child {
+    border-radius: 0 5px 5px 0;
+    border-left: 0;
+}
+  
+.tbl-confirm{
+    background: #F8F8F8;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.tbl-confirm .table-header{
+    display: flex;
+    flex-direction: column; 
+}
+
+.tbl-confirm .table-header th{
+    color: #228A95;
+}
+
+.tbl-confirm .table-header .headers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tbl-confirm .table-header .headers th{
+    width: 240px;
+    color: #777777;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.tbl-confirm .table-items{
+    width: 1218px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tbl-confirm .table-items td{
+    width: 240px;
+    display: flex;
+    justify-content: center;
+    color:#777777;
+    font-size: 23px;
+    font-weight: normal;
+    border: 1px solid #777777;;
+}

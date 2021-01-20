@@ -1,0 +1,177 @@
+.columns{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.columns .left-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.columns .left-column .left-column-title{
+    font-size: 29px;
+    color: #777;
+}
+
+.columns .left-column .left-column-title strong{
+    color: #228A95;
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.columns .left-column ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.columns .left-column ul li{
+    display: flex;
+    flex-direction: column;
+    width: 278px;
+    height: 284px;
+    border-radius: 5px;
+    background: #F8F8F8;
+    color: #777;   
+    align-items: center; 
+}
+
+.columns .left-column .total-text{
+    font-size: 29px;
+    margin-top: 33px;
+    font-style: oblique;
+    margin-bottom: 45px;
+}
+
+.columns .left-column .total-value{
+    font-size: 36px;
+    font-weight: bold;
+    color: #31AC2B;
+}
+
+.columns .left-column .card-text{
+    margin-top: 20px;
+    font-size: 26px;
+    font-style: oblique;
+    margin-bottom: 32px;
+}   
+
+
+.columns .left-column ul li img{
+    width: 78px;
+    margin-bottom: 32px;
+}
+
+.columns .left-column ul li a{
+    font-size: 21px;
+    color: #2D98B4;
+}
+
+.columns .right-column{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.columns .right-column .right-column-title{
+    font-size: 29px;
+    color: #777;
+    display: flex;
+}
+
+.columns .right-column .right-column-title strong{
+    color: #228A95;
+    font-weight: bold;
+    font-size: 27px;
+}
+
+.columns .right-column .right-cels-title{
+    font-size: 20px;
+    font-style: oblique;
+    color: #777;
+    margin-bottom: 28px;
+    margin-top: 23px;
+    margin-left: 35px;
+}
+
+.columns .right-column .infos{
+    background-color: #F8F8F8;
+    border-radius: 5px;
+    width: 586px;
+    height: 333px;
+    margin-bottom: 50px;
+}
+
+.columns .right-column ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.columns .right-column ul li{
+    display: flex;
+    color: #777;
+    font-weight: bold;
+    font-size: 22px;
+    margin-top: 15px;    
+}
+
+.columns .right-column .modality ul li strong{
+    color: #31AC2B;
+}
+
+.columns .right-column .general-infos{
+    background: #E8F3F4;
+    border: 1px dashed #187680;
+}
+
+.columns .right-column .general-infos .last-field{
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    color: #777777;
+    margin-bottom: 24px;
+}
+
+.columns .right-column .all-buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 28px;    
+}
+
+.columns .right-column .all-buttons button{
+    border:none;
+    display: flex;
+    font-size: 22px;
+    color: #fff;
+    border-radius: 5px;
+    height: 53px;
+    width: 209px;
+    justify-content: center;
+    align-items: center;
+}
+
+.columns .right-column .all-buttons .wait-button{
+    background: #EF9C4B;
+    width: 282px;
+    margin-bottom: 35px;
+}
+
+.columns .right-column .all-buttons .down-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.columns .right-column .all-buttons .aprove-button{
+    background: #228A95;
+    margin-right: 27px;
+}
+
+.columns .right-column .all-buttons .disaprove-button{
+    background: #BC3434;
+}
+

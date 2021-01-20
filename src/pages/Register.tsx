@@ -1,23 +1,39 @@
 import React,{useState, FormEvent} from 'react';
+import { useHistory } from 'react-router-dom';
 
 import Headerbar from '../components/HeaderBar';
 import TitleItem from '../components/TitleItem';
 
 import '../styles/pages/register.css';
 
-export default function Register(){
 
-    const[name, setName]=useState('');
-    const[card_number, setCardNumber]=useState('');
-    const[month_year, setMonthYear]=useState('');
-    const[code, setCode]=useState('');
+export default function Register(){
+    const history = useHistory();
+    const[name, setName] = useState<string>('');
+    const[card_number, setCardNumber] = useState<string>('');
+    const[month_year, setMonthYear] = useState<string>('');
+    const[code, setCode] = useState<string>('');
+    const tagCard = '@card/data';
+
+
+    function handleSubmit(event: FormEvent){
+        event.preventDefault();
+        const data = {
+            'name': name,
+            'card_number': card_number,
+            'month_year': month_year,
+            'code': code
+        }
+        history.push('/confirmation');
+        localStorage.setItem(tagCard, JSON.stringify(data));
+    };
 
     return(
         <>
             <Headerbar/>
             <div className="container">
                 <TitleItem text="Solicitar Empréstimo"/>
-                <form onSubmit={()=>{}} className="create-orphanage-form">
+                <form onSubmit={handleSubmit}>
                     <div className="all-info-card">
                         <div className="card-left-data">
                             <label className="title" htmlFor="left-lable">Insira os dados do Cartão</label>

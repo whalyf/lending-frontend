@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 18px;
+    margin-top: 25px;
+    max-width: 600px;
 }
 
 .items .plus-icon{
@@ -16,10 +17,11 @@
 }
 
 .items label{
-    font-size: 56px;
+    font-size: 55px;
     font-weight: bold;
     color: #228A95;
     text-align: left;
     width: 285px;
     margin-left: 18px;
+    text-align: justify;
 }

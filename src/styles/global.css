@@ -6,7 +6,6 @@
 
 body{
     color: #FFF;
-    background: #000;
 }
 
 button{
@@ -15,4 +14,9 @@ button{
 
 body, input, button, textarea{
     font-size: 33px;
+}
+
+.container{
+    max-width: 1291px;
+    transform: translateX(25%);
 }
