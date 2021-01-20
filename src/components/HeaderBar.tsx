@@ -2,8 +2,6 @@ import React from 'react';
 import {FiMenu} from 'react-icons/fi'
 import {Link} from 'react-router-dom'
 
-
-
 import '../styles/components/header-bar.css';
 
 import logoImg from '../images/logo.svg';
@@ -18,6 +16,7 @@ export default function HeaderBar(){
                 <Link className='logo-link' to ='/'>
                     <img src={logoImg} alt="LogoKlutch"/>
                 </Link>
+                <p></p>
             </div>
         </header>
     )

@@ -2,12 +2,12 @@ import React,{ useState } from 'react';
 import HeaderBar from '../components/HeaderBar';
 import TitleItem from '../components/TitleItem';
 import {FiAlertCircle, FiCheckCircle} from 'react-icons/fi';
+import _, { now } from 'lodash';
 
 import '../styles/pages/details.css';
 import archiveImg from '../images/archive.svg';
 
 import backend from '../api.json';
-import _ from 'lodash';
 
 interface ClientCardData{
     name: string;
@@ -28,7 +28,7 @@ export default function Details(){
     let total_value = (tableData?.installments[quotaId].fullValue);
     let quota_value = (tableData?.installments[quotaId].installmentValue);
     const clientAllData = (_.find(clients,{id:clientId}));
-
+    
     return(
         <>
             <HeaderBar/>

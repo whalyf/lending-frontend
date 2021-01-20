@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 
 import '../styles/components/title-item.css';
 
@@ -13,9 +12,7 @@ interface TitleProps{
 export default function TitleItem(props: TitleProps){
     return(
         <div className="items">
-            <Link className='menu-link' to ='/'>
-                <img className="plus-icon" src={Plus} alt="plus"/>
-            </Link>
+            <img className="plus-icon" src={Plus} alt="plus"/>
             <img className="folders-icon" src={Folders} alt="folders"/>
             <label htmlFor="Simulacao">{props.text}</label>
         </div>

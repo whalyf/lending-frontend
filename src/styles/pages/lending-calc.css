@@ -100,7 +100,7 @@
     border: 1px solid #777777;;
 }
 
-.footer{
+.footer:not(.container){
     background: #228A95;
     max-width: 1920px;
     height: 86px;
@@ -108,11 +108,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .footer .footer-content{
     max-width: 1291px;
-}
+} 
 
 .footer .footer-content label{
     font-size: 30px;

@@ -17,6 +17,8 @@ body, input, button, textarea{
 }
 
 .container{
+    display: block;
     max-width: 1291px;
-    transform: translateX(25%);
+    margin: auto;
+    width: 100%;
 }
