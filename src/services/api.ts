@@ -1,4 +1,4 @@
-import backend from '../api.json';
+import backend from '../../db.json';
 
     const api = backend
 

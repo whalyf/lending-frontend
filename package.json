@@ -12,6 +12,7 @@
     "@types/react": "^16.14.2",
     "@types/react-dom": "^16.9.8",
     "lodash": "^4.17.20",
+    "lowdb": "^1.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.1.0",

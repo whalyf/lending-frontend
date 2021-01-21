@@ -43,7 +43,6 @@ export default function Confirmation(){
     let installment_interest = (tableData?.installments[quotaId].installmentInterest) || 0;
     const [automatic, setAutomatic] = useState<boolean>(true);
     const tagConfirm = '@confirm/type';
-
    
     console.log('SOLICITATION INICIAL', solic)
 
@@ -62,15 +61,7 @@ export default function Confirmation(){
         installmentId: quotaId,
         rateTableId: id
     }
-    
-
-/*      Cenário com uso de backend, a requisição sendo realizada por params na URL
-        useEffect(()=>{
-            api.get(`confirmation/${params.id}`).then(response => {
-                setTables(response.data)
-        })
-        },[]) */
-    
+        
     function handleSubmit(){
         localStorage.setItem(tagConfirm, JSON.stringify(automatic));
         history.push('/confirmation-succeed');
