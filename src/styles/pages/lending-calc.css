@@ -83,7 +83,7 @@
 }
 
 .tbl .table-items{
-    width: 1218px;
+    width: 1220px;
     background: #FFFFFF;
     display: flex;
     flex-direction: row;
@@ -100,19 +100,19 @@
     border: 1px solid #777777;;
 }
 
-.footer:not(.container){
+.footer{
     background: #228A95;
-    max-width: 1920px;
+    max-width: 1225px;
+    width: 100%;
     height: 86px;
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    margin-bottom: 200px;
 }
 
 .footer .footer-content{
-    max-width: 1291px;
+    max-width: 1220px;
 } 
 
 .footer .footer-content label{

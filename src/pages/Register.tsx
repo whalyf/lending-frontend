@@ -9,6 +9,7 @@ import '../styles/pages/register.css';
 
 export default function Register(){
     const history = useHistory();
+    const [tableId, setTableId] = useState(Number(localStorage.getItem('@table/type')));
     const[name, setName] = useState<string>('');
     const[card_number, setCardNumber] = useState<string>('');
     const[month_year, setMonthYear] = useState<string>('');
@@ -24,8 +25,8 @@ export default function Register(){
             'month_year': month_year,
             'code': code
         }
-        history.push('/confirmation');
         localStorage.setItem(tagCard, JSON.stringify(data));
+        history.push(`/confirmation/${tableId}`);
     };
 
     return(
@@ -40,6 +41,7 @@ export default function Register(){
                             <div className="card-data">                
                                 <input 
                                     id="name"
+                                    required={true}
                                     placeholder="Nome" 
                                     value={name} 
                                     onChange={event => setName(event.target.value)}
@@ -48,6 +50,7 @@ export default function Register(){
                             <div className="card card-data">                
                                 <input 
                                     id="card-number"
+                                    required={true}
                                     placeholder="Numero do cartão" 
                                     value={card_number} 
                                     onChange={event => setCardNumber(event.target.value)}
@@ -56,6 +59,7 @@ export default function Register(){
                             <div className="card-data">                
                                 <input 
                                     id="month_year"
+                                    required={true}
                                     placeholder="Data de Validade" 
                                     value={month_year} 
                                     onChange={event => setMonthYear(event.target.value)}
@@ -64,6 +68,7 @@ export default function Register(){
                             <div className="card-data">                
                                 <input 
                                     id="code"
+                                    required={true}
                                     placeholder="CVC" 
                                     value={code} 
                                     onChange={event => setCode(event.target.value)}

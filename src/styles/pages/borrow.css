@@ -91,7 +91,7 @@
     filter: brightness(90%);
 }
 
-.client-not-found{
+/* .client-not-found{
     display: flex;
     margin: auto;
     background: #dd1212;
@@ -101,4 +101,4 @@
     align-items: center;
     justify-content: center;
     font-weight: bold;
-}
+} */

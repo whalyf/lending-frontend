@@ -7,7 +7,7 @@ import TitleItem from '../components/TitleItem';
 
 import '../styles/pages/borrow.css';
 
-import backend from '../api.json';
+import backend from '../services/api';
 
 interface Client{
     id: number;
@@ -28,10 +28,18 @@ export default function Borrow(){
     const [response, setResponse] = useState<Client>();
     const data = backend.client;
     const tagClient = '@client/id';
+    const [placeholder, setPlaceholder] = useState<string>('000.000.000-00');
+
+    
+
 
     function handleSearch(event: FormEvent){
         event.preventDefault();
         setResponse(_.find(data,{cpf:cpf}));
+        if(response === undefined)
+            setPlaceholder('Cliente Não Encontrado');
+        else
+            setPlaceholder('000.000.000-00');
     };
 
     function handleSolicitate(){
@@ -50,10 +58,13 @@ export default function Borrow(){
                         <label htmlFor="Simulacao">Busque o Cliente</label>
                         <form onSubmit={handleSearch} className="input-field">
                             <input 
-                                placeholder="000.000.000-00"
+                                
+                                placeholder={placeholder}
                                 maxLength={11}
+                                minLength={11}
                                 required={true}
                                 value={cpf}
+                                type="number"
                                 onChange={event=>setCpf(event.target.value)}
                             />
                             <button className="button" type="submit">Buscar</button>
@@ -67,9 +78,7 @@ export default function Borrow(){
                             <button className="button" onClick={()=>handleSolicitate()}>Solicitar</button>
                         </div>
                     ):(
-                        <div className="client-not-found">
-                            <label className="client-not-found" htmlFor="Simulacao">Cliente Não Encontrado</label>
-                        </div>
+                        <p></p>
                     )}
                 </div>
             </div>

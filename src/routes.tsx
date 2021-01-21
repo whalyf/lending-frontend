@@ -17,7 +17,7 @@ export default function Routes(){
                 <Route path="/borrow" component={Borrow}/>
                 <Route path="/register" component={Register}/>
                 <Route path="/card-type" component={CardType}/>
-                <Route path="/confirmation" component={Confirmation}/>
+                <Route path="/confirmation/:id" component={Confirmation}/>
                 <Route path="/confirmation-succeed" component={ConfirmationSucceed}/>
                 <Route path="/details" component={Details}/>
             </Switch>

@@ -7,7 +7,7 @@ import HeaderBar from '../components/HeaderBar';
 import TitleItem from '../components/TitleItem';
 
 import '../styles/pages/confirmation-succeed.css';
-import backend from '../api.json';
+import backend from '../services/api';
 
 interface Client{
     name: string;

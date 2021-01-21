@@ -2,7 +2,7 @@ import React,{ useState } from 'react';
 import HeaderBar from '../components/HeaderBar';
 import TitleItem from '../components/TitleItem';
 import {FiAlertCircle, FiCheckCircle} from 'react-icons/fi';
-import _, { now } from 'lodash';
+import _ from 'lodash';
 
 import '../styles/pages/details.css';
 import archiveImg from '../images/archive.svg';
@@ -24,7 +24,7 @@ export default function Details(){
     const [quotaId, setQuotaId] = useState(Number(localStorage.getItem('@table/quota')));
     const [client, setClient] = useState<ClientCardData>(JSON.parse(String(localStorage.getItem('@card/data'))));
     const [clientId, setclientId] = useState<number>(JSON.parse(String(localStorage.getItem('@client/id'))));
-    const [type, setType] = useState<boolean>(Boolean(localStorage.getItem('@confirm/type')));
+    const [type, setType] = useState((localStorage.getItem('@confirm/type')));
     let total_value = (tableData?.installments[quotaId].fullValue);
     let quota_value = (tableData?.installments[quotaId].installmentValue);
     const clientAllData = (_.find(clients,{id:clientId}));
@@ -64,7 +64,7 @@ export default function Details(){
                         </ul>
                     </div>
                     <div className="right-column">
-                        <label className="right-column-title" htmlFor="">Fluxo de Solicitação: {type ? (<strong>Automático</strong>):(<strong>Manual</strong>)}</label>
+                        <label className="right-column-title" htmlFor="">Fluxo de Solicitação: {type?.length === 4 ? (<strong>Automático</strong>):(<strong>Manual</strong>)}</label>
                         <div className="modality infos">
                             <label className="right-cels-title" htmlFor="">Modalidade:</label>
                             <ul>

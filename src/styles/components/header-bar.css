@@ -21,3 +21,7 @@
     height:40px;
     display:inline-flex;
 }
+
+.app-header .header-icons .logout-link{
+    margin-right: 20px;
+}   

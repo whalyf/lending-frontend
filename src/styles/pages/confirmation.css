@@ -136,6 +136,7 @@ form .contract-type .button-select button:last-child {
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    margin-bottom: 200px;
 }
 
 .tbl-confirm .table-header{

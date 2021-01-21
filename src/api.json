@@ -96,7 +96,7 @@
   "client": [
     {
       "id": 1,
-      "name": "Ani",
+      "name": "Teste da Silva",
       "phone": "71999999999",
       "cpf": "9999999999",
       "bank": {
@@ -107,7 +107,7 @@
     },
     {
       "id": 2,
-      "name": "Teste Cliente",
+      "name": "Teste Viana",
       "phone": "71222222222",
       "cpf": "2222222229",
       "bank": {
