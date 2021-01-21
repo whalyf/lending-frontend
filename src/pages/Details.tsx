@@ -7,7 +7,7 @@ import _ from 'lodash';
 import '../styles/pages/details.css';
 import archiveImg from '../images/archive.svg';
 
-import backend from '../api.json';
+import backend from '../services/api';
 
 interface ClientCardData{
     name: string;

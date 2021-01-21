@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from 'react';
+import React, { FormEvent, useState} from 'react';
 import { useHistory } from 'react-router-dom';
 import _ from 'lodash';
 
@@ -26,7 +26,7 @@ export default function LendingCalc(){
     const [footer, setFooter] = useState<number>();
     const [footerData, setFooterData] = useState<Footer>();
     const [tableName, setTableName] = useState<string>();
-    
+
     //localStorage tags
     const tagTable = '@table/type';
     const tagQuota = '@table/quota';
@@ -40,7 +40,7 @@ export default function LendingCalc(){
                     <table className="tbl">
                         <div className="table-header">
                             <div className="radio-title">
-                                <input type="radio" onChange={()=>updateTableData(category.id)} name="table-select" id=""/>
+                                <form onChange={()=>updateTableData(category.id)} name="table-select" id=""/>
                                 <th>{category.name}</th> 
                             </div>
                             <div className="headers">

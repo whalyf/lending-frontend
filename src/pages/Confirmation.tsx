@@ -43,6 +43,8 @@ export default function Confirmation(){
     let installment_interest = (tableData?.installments[quotaId].installmentInterest) || 0;
     const [automatic, setAutomatic] = useState<boolean>(true);
     const tagConfirm = '@confirm/type';
+
+    console.log(quotaId)
    
     console.log('SOLICITATION INICIAL', solic)
 

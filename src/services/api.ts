@@ -1,5 +1,5 @@
-import backend from '../../db.json';
+import backend from '../api.json';
 
-    const api = backend
+    const api = backend;
 
 export default api;
