@@ -1,12 +1,9 @@
 import React, {FormEvent, useState} from 'react';
 import { useHistory } from 'react-router-dom';
 import _ from 'lodash';
-
 import HeaderBar from '../components/HeaderBar';
 import TitleItem from '../components/TitleItem';
-
 import '../styles/pages/borrow.css';
-
 import backend from '../services/api';
 
 interface Client{
@@ -23,15 +20,11 @@ interface Client{
 
 export default function Borrow(){
     const history = useHistory();
-    
     const [cpf, setCpf] = useState<string>('');
     const [response, setResponse] = useState<Client>();
     const data = backend.client;
     const tagClient = '@client/id';
     const [placeholder, setPlaceholder] = useState<string>('000.000.000-00');
-
-    
-
 
     function handleSearch(event: FormEvent){
         event.preventDefault();
@@ -58,7 +51,6 @@ export default function Borrow(){
                         <label htmlFor="Simulacao">Busque o Cliente</label>
                         <form onSubmit={handleSearch} className="input-field">
                             <input 
-                                
                                 placeholder={placeholder}
                                 maxLength={11}
                                 minLength={11}

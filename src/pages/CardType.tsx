@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-
 import HeaderBar from '../components/HeaderBar';
 import TitleItem from '../components/TitleItem';
-
 import '../styles/pages/card-type.css';
-
 
 export default function CardType(){
     const history = useHistory();

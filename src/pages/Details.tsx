@@ -3,10 +3,8 @@ import HeaderBar from '../components/HeaderBar';
 import TitleItem from '../components/TitleItem';
 import {FiAlertCircle, FiCheckCircle} from 'react-icons/fi';
 import _ from 'lodash';
-
 import '../styles/pages/details.css';
 import archiveImg from '../images/archive.svg';
-
 import backend from '../services/api';
 
 interface ClientCardData{
@@ -104,11 +102,9 @@ export default function Details(){
                                     </button>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
-                
             </div>
         </>
     )

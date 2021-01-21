@@ -1,11 +1,8 @@
 import React,{useState, FormEvent} from 'react';
 import { useHistory } from 'react-router-dom';
-
 import Headerbar from '../components/HeaderBar';
 import TitleItem from '../components/TitleItem';
-
 import '../styles/pages/register.css';
-
 
 export default function Register(){
     const history = useHistory();
@@ -15,7 +12,6 @@ export default function Register(){
     const[month_year, setMonthYear] = useState<string>('');
     const[code, setCode] = useState<string>('');
     const tagCard = '@card/data';
-
 
     function handleSubmit(event: FormEvent){
         event.preventDefault();

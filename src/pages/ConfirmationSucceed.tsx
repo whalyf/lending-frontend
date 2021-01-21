@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { FiCheck } from 'react-icons/fi';
 import _ from 'lodash';
-
 import HeaderBar from '../components/HeaderBar';
 import TitleItem from '../components/TitleItem';
-
 import '../styles/pages/confirmation-succeed.css';
 import backend from '../services/api';
 
@@ -18,7 +16,6 @@ interface Client{
 
 export default function ConfirmationSucceed(){
     const history = useHistory();
-    //Recoverying localStorageData
     const tables = backend.rateTable;
     const [tableId, setTableId] = useState(Number(localStorage.getItem('@table/type')));
     const tableData = (_.find(tables,{id:tableId}));
@@ -77,7 +74,6 @@ export default function ConfirmationSucceed(){
                         </div>
                     </div>
                 </div>
-
                 <div className="total">
                     <div className="confirm">
                         <label className="confirm-total label" htmlFor="IntendedValue">Valor total do empréstimo</label>
@@ -91,7 +87,7 @@ export default function ConfirmationSucceed(){
                     </button>
                     <label className="last-text" htmlFor="credfica">O CredFica avaliará a solicitação</label>
                 </div>
-        </div>    
+            </div>    
         )
     }
     return(

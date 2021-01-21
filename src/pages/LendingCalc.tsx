@@ -1,11 +1,9 @@
 import React, { FormEvent, useState} from 'react';
 import { useHistory } from 'react-router-dom';
 import _ from 'lodash';
-
 import HeaderBar from '../components/HeaderBar';
 import TitleItem from '../components/TitleItem';
 import '../styles/pages/lending-calc.css';
-
 import backend from '../services/api';
 
 interface Footer{
@@ -26,7 +24,6 @@ export default function LendingCalc(){
     const [footer, setFooter] = useState<number>();
     const [footerData, setFooterData] = useState<Footer>();
     const [tableName, setTableName] = useState<string>();
-
     //localStorage tags
     const tagTable = '@table/type';
     const tagQuota = '@table/quota';
@@ -35,35 +32,35 @@ export default function LendingCalc(){
     function AllTables(){
         return(
             <td>
-            {tables.map(category=>(
-                <ul key={category.id}>
-                    <table className="tbl">
-                        <div className="table-header">
-                            <div className="radio-title">
-                                <form onChange={()=>updateTableData(category.id)} name="table-select" id=""/>
-                                <th>{category.name}</th> 
+                {tables.map(category=>(
+                    <ul key={category.id}>
+                        <table className="tbl">
+                            <div className="table-header">
+                                <div className="radio-title">
+                                    <form onChange={()=>updateTableData(category.id)} name="table-select" id=""/>
+                                    <th>{category.name}</th> 
+                                </div>
+                                <div className="headers">
+                                    <th>Parcela</th>
+                                    <th>Juros da Parcela</th>
+                                    <th>Valor Parcela</th>
+                                    <th>Valor Total</th>
+                                    <th>Comissão</th>
+                                </div>
                             </div>
-                            <div className="headers">
-                                <th>Parcela</th>
-                                <th>Juros da Parcela</th>
-                                <th>Valor Parcela</th>
-                                <th>Valor Total</th>
-                                <th>Comissão</th>
-                            </div>
-                        </div>
-                        {category.installments.map(eachItem=>(
-                            <tr className="table-items">
-                                <input type="radio" onChange={()=>updateFooterData(eachItem.id,category.id, category.name)} name="quota-select" id=""/>
-                                <td>{eachItem.installments}</td>
-                                <td>{eachItem.installmentInterest}%</td>
-                                <td>R${eachItem.installmentValue}</td>
-                                <td>R${eachItem.fullValue}</td>
-                                <td>R${eachItem.comission}</td>
-                            </tr>
-                        ))}
-                    </table>
-                </ul>  
-            ))}   
+                            {category.installments.map(eachItem=>(
+                                <tr className="table-items">
+                                    <input type="radio" onChange={()=>updateFooterData(eachItem.id,category.id, category.name)} name="quota-select" id=""/>
+                                    <td>{eachItem.installments}</td>
+                                    <td>{eachItem.installmentInterest}%</td>
+                                    <td>R${eachItem.installmentValue}</td>
+                                    <td>R${eachItem.fullValue}</td>
+                                    <td>R${eachItem.comission}</td>
+                                </tr>
+                            ))}
+                        </table>
+                    </ul>  
+                ))}   
             </td>
         )
     };
@@ -117,21 +114,20 @@ export default function LendingCalc(){
                 </div>
                 {showTable ?(
                     <>
-                    <AllTables/>
-                    <div className="footer">
-                        <div className="footer-content">
-                            <label htmlFor="Name">Nome: {tableName}</label>
-                            <label htmlFor="Quota">Parcelas: {footerData?.installments}</label>
-                            <label htmlFor="Quota Value">Valor da Parcela: R$ {footerData?.installmentValue}</label>
-                            <button className="button" onClick={handleSelectTable}>Avançar</button>
+                        <AllTables/>
+                        <div className="footer">
+                            <div className="footer-content">
+                                <label htmlFor="Name">Nome: {tableName}</label>
+                                <label htmlFor="Quota">Parcelas: {footerData?.installments}</label>
+                                <label htmlFor="Quota Value">Valor da Parcela: R$ {footerData?.installmentValue}</label>
+                                <button className="button" onClick={handleSelectTable}>Avançar</button>
+                            </div>
                         </div>
-                    </div>
                     </>
                 ):(
                     <p></p>
                 )}
             </div>
-            
         </div>
     )
 }

@@ -2,12 +2,9 @@ import React, {useState } from 'react';
 import { FiCheck } from 'react-icons/fi';
 import { useHistory, useParams } from 'react-router-dom';
 import _ from 'lodash';
-
 import HeaderBar from '../components/HeaderBar';
 import TitleItem from '../components/TitleItem';
-
 import '../styles/pages/confirmation.css';
-
 import backend from '../services/api';
 
 interface ClientCard{
@@ -21,17 +18,13 @@ interface Tbl{
     id:string
 }
 
-
 export default function Confirmation(){
     const history = useHistory();
     const params = useParams<Tbl>();
     const tables = backend.rateTable;
     let solic = backend.solicitation;
-    
     const id = parseInt(params.id)
-    
     const tableData = (_.find(tables,{id:id}));
-
     const [clientId, setClientiD] = useState<number>(JSON.parse(String(localStorage.getItem('@client/id'))));
     const [clientCard, setClientCard] = useState<ClientCard>(JSON.parse(String(localStorage.getItem('@card/data'))));
     const [intended_value, setIntendedValue] = useState(Number(localStorage.getItem('@value/intended')));
@@ -43,11 +36,7 @@ export default function Confirmation(){
     let installment_interest = (tableData?.installments[quotaId].installmentInterest) || 0;
     const [automatic, setAutomatic] = useState<boolean>(true);
     const tagConfirm = '@confirm/type';
-
-    console.log(quotaId)
    
-    console.log('SOLICITATION INICIAL', solic)
-
     //Esse é o objeto que deve ser inserido no api.json na parte `Solicitations`
     const newSolic = {
         id: (solic.length + 1),
@@ -67,7 +56,7 @@ export default function Confirmation(){
     function handleSubmit(){
         localStorage.setItem(tagConfirm, JSON.stringify(automatic));
         history.push('/confirmation-succeed');
-        console.log('SOLICITATION INCREMENTADO',solic.concat(newSolic));
+        console.log('Objeto Solic Incrementado',solic.concat(newSolic));
     };
 
     function ReviewData(){
