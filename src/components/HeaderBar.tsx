@@ -14,13 +14,13 @@ export default function HeaderBar(){
     return(
         <header className="app-header">
             <div className="header-icons">
-                <Link className='menu-link' to ='/'>
+                <Link className='menu-link' title="Menu" to ='/'>
                     <FiMenu size={40} color="#FFF"/>
                 </Link>
-                <Link className='logo-link' to ='/'>
+                <Link className='logo-link' title="Home" to ='/'>
                     <img src={logoImg} alt="LogoKlutch"/>
                 </Link>
-                <Link className='logout-link' onClick={()=>handleClearStorage()} to ='/'>
+                <Link className='logout-link' title="LogOut" onClick={()=>handleClearStorage()} to ='/'>
                     <FiLogOut size={40} color="#FFF"/>
                 </Link>
             </div>

@@ -90,15 +90,3 @@
 .client-found .button:hover{
     filter: brightness(90%);
 }
-
-/* .client-not-found{
-    display: flex;
-    margin: auto;
-    background: #dd1212;
-    border-radius: 5px;
-    width: 473px;
-    height: 75px;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-} */
