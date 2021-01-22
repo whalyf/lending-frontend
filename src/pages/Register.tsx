@@ -42,7 +42,8 @@ export default function Register(){
                                     id="name"
                                     required={true}
                                     placeholder="Nome" 
-                                    value={name} 
+                                    value={name}
+                                    type="text" 
                                     onChange={event => setName(event.target.value)}
                                 />
                             </div>
@@ -59,7 +60,7 @@ export default function Register(){
                                 <input 
                                     id="month_year"
                                     required={true}
-                                    placeholder="Data de Validade" 
+                                    placeholder="Data de Validade MM/AA" 
                                     value={month_year} 
                                     onChange={event => setMonthYear(event.target.value)}
                                 />
@@ -68,7 +69,9 @@ export default function Register(){
                                 <input 
                                     id="code"
                                     required={true}
-                                    placeholder="CVC" 
+                                    placeholder="CVC"
+                                    max="999"
+                                    type="number" 
                                     value={code} 
                                     onChange={event => setCode(event.target.value)}
                                 />

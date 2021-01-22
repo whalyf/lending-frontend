@@ -118,7 +118,7 @@ export default function LendingCalc(){
                         <div className="footer">
                             <div className="footer-content">
                                 <label htmlFor="Name">Nome: {tableName}</label>
-                                <label htmlFor="Quota">Parcelas: {footerData?.installments}</label>
+                                <label htmlFor="Quota">Parcela: {footerData?.installments}</label>
                                 <label htmlFor="Quota Value">Valor da Parcela: R$ {footerData?.installmentValue}</label>
                                 <button className="button" onClick={handleSelectTable}>Avançar</button>
                             </div>
