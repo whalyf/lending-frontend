@@ -25,8 +25,6 @@ export default function Confirmation(){
     let solic = backend.solicitation;
     const id = parseInt(params.id)
     const tableData = (_.find(tables,{id:id}));
-
-
     const [clientId, setClientiD] = useState<number>(JSON.parse(String(localStorage.getItem('@client/id'))));
     const [clientCard, setClientCard] = useState<ClientCard>(JSON.parse(String(localStorage.getItem('@card/data'))));
     const [intended_value, setIntendedValue] = useState(Number(localStorage.getItem('@value/intended')));
