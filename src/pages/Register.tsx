@@ -6,12 +6,15 @@ import '../styles/pages/register.css';
 
 export default function Register(){
     const history = useHistory();
-    const [tableId, setTableId] = useState(Number(localStorage.getItem('@table/type')));
+    const [tableId, setTableId] = useState(localStorage.getItem('@table/type'));
     const[name, setName] = useState<string>('');
     const[card_number, setCardNumber] = useState<string>('');
     const[month_year, setMonthYear] = useState<string>('');
     const[code, setCode] = useState<string>('');
     const tagCard = '@card/data';
+
+    console.log(typeof tableId)
+    console.log(tableId)
 
     function handleSubmit(event: FormEvent){
         event.preventDefault();

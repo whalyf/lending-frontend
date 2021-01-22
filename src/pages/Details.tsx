@@ -17,14 +17,14 @@ interface ClientCardData{
 export default function Details(){
     const tables = backend.rateTable;
     const clients = backend.client;
-    const [tableId, setTableId] = useState(Number(localStorage.getItem('@table/type')));
+    const [tableId, setTableId] = useState<number>(Number(localStorage.getItem('@table/type')));
     const tableData = (_.find(tables,{id:tableId}));
     const [quotaId, setQuotaId] = useState(Number(localStorage.getItem('@table/quota')));
     const [client, setClient] = useState<ClientCardData>(JSON.parse(String(localStorage.getItem('@card/data'))));
     const [clientId, setclientId] = useState<number>(JSON.parse(String(localStorage.getItem('@client/id'))));
     const [type, setType] = useState((localStorage.getItem('@confirm/type')));
-    let total_value = (tableData?.installments[quotaId].fullValue);
-    let quota_value = (tableData?.installments[quotaId].installmentValue);
+    let total_value = (tableData?.installments[quotaId-1].fullValue);
+    let quota_value = (tableData?.installments[quotaId-1].installmentValue);
     const clientAllData = (_.find(clients,{id:clientId}));
     
     return(

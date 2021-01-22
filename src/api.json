@@ -30,7 +30,7 @@
           "id": 3,
           "installments": 1,
           "installmentInterest": 10,
-          "installmentValue": 22.00,
+          "installmentValue": 300,
           "fullValue": 224.00,
           "comission": 1.33
         },
@@ -38,7 +38,7 @@
           "id": 4,
           "installments": 2,
           "installmentInterest": 20.5,
-          "installmentValue": 2.76,
+          "installmentValue": 400,
           "fullValue": 9.51,
           "comission": 3.51
         },
@@ -46,7 +46,7 @@
           "id": 5,
           "installments": 3,
           "installmentInterest": 20.5,
-          "installmentValue": 2.76,
+          "installmentValue": 500,
           "fullValue": 9.51,
           "comission": 3.51
         },
@@ -54,15 +54,15 @@
           "id": 6,
           "installments": 4,
           "installmentInterest": 20.5,
-          "installmentValue": 2.76,
-          "fullValue": 9.51,
-          "comission": 3.51
+          "installmentValue": 600,
+          "fullValue": 10,
+          "comission": 5
         },
         {
           "id": 7,
           "installments": 5,
           "installmentInterest": 20.5,
-          "installmentValue": 2.76,
+          "installmentValue": 700,
           "fullValue": 9.51,
           "comission": 3.51
         },
@@ -70,7 +70,7 @@
           "id": 8,
           "installments": 6,
           "installmentInterest": 20.5,
-          "installmentValue": 2.76,
+          "installmentValue": 800,
           "fullValue": 9.51,
           "comission": 3.51
         },
@@ -78,7 +78,7 @@
           "id": 9,
           "installments": 7,
           "installmentInterest": 20.5,
-          "installmentValue": 2.76,
+          "installmentValue": 900,
           "fullValue": 9.51,
           "comission": 3.51
         },
@@ -86,7 +86,7 @@
           "id": 10,
           "installments": 8,
           "installmentInterest": 20.5,
-          "installmentValue": 2.76,
+          "installmentValue": 1000,
           "fullValue": 9.51,
           "comission": 3.51
         }

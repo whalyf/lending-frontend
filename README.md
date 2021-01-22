@@ -1,6 +1,6 @@
 (pt-br)
 
-Ao efetuar o download dos diretórios da aplicação, por meio do prompt vá ao diretório e execute "npm install ou /yarn install" (a depender do seu gerenciador de pacotes instalado).
+Ao efetuar o download dos diretórios da aplicação, por meio do prompt vá ao diretório e execute "npm install ou yarn install" (a depender do seu gerenciador de pacotes instalado).
 
 Após instalar todas as dependencias necessárias, no diretório /frontend execute o comando "yarn start ou npm start" inicializando a aplicação.
 

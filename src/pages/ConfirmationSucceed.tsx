@@ -22,9 +22,9 @@ export default function ConfirmationSucceed(){
     const [client, setClient] = useState<Client>(JSON.parse(String(localStorage.getItem('@card/data'))));
     const [intended_value, setIntendedValue] = useState(Number(localStorage.getItem('@value/intended')));
     const [quotaId, setQuotaId] = useState(Number(localStorage.getItem('@table/quota')));
-    let total_value = Number(tableData?.installments[quotaId].fullValue);
-    let quota_value = Number(tableData?.installments[quotaId].installmentValue);
-    let fee = Number(tableData?.installments[quotaId].installmentInterest);
+    let total_value = Number(tableData?.installments[quotaId-1].fullValue);
+    let quota_value = Number(tableData?.installments[quotaId-1].installmentValue);
+    let fee = Number(tableData?.installments[quotaId-1].installmentInterest);
     let quota = Number(tableData?.installments.length);
        
     function ClientData(){

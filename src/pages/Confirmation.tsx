@@ -25,17 +25,21 @@ export default function Confirmation(){
     let solic = backend.solicitation;
     const id = parseInt(params.id)
     const tableData = (_.find(tables,{id:id}));
+
+
     const [clientId, setClientiD] = useState<number>(JSON.parse(String(localStorage.getItem('@client/id'))));
     const [clientCard, setClientCard] = useState<ClientCard>(JSON.parse(String(localStorage.getItem('@card/data'))));
     const [intended_value, setIntendedValue] = useState(Number(localStorage.getItem('@value/intended')));
     const [quotaId, setQuotaId] = useState(Number(localStorage.getItem('@table/quota')));
     let quota = (tableData?.installments.length);
-    let total_loan = (tableData?.installments[quotaId].fullValue) || 0;
-    let quota_value = (tableData?.installments[quotaId].installmentValue) || 0;
-    let comission = (tableData?.installments[quotaId].comission) || 0;
-    let installment_interest = (tableData?.installments[quotaId].installmentInterest) || 0;
+    let total_loan = (tableData?.installments[quotaId - 1].fullValue) || 0;
+    let quota_value = (tableData?.installments[quotaId -1 ].installmentValue) || 0;
+    let comission = (tableData?.installments[quotaId-1].comission) || 0;
+    let installment_interest = (tableData?.installments[quotaId-1].installmentInterest) || 0;
     const [automatic, setAutomatic] = useState<boolean>(true);
     const tagConfirm = '@confirm/type';
+
+   console.log(tableData)
    
     //Esse é o objeto que deve ser inserido no api.json na parte `Solicitations`
     const newSolic = {

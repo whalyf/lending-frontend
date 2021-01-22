@@ -50,7 +50,7 @@ export default function LendingCalc(){
                             </div>
                             {category.installments.map(eachItem=>(
                                 <tr className="table-items">
-                                    <input type="radio" onChange={()=>updateFooterData(eachItem.id,category.id, category.name)} name="quota-select" id=""/>
+                                    <input type="radio" onChange={()=>updateFooterData(eachItem.installments,category.id, category.name)} name="quota-select" id=""/>
                                     <td>{eachItem.installments}</td>
                                     <td>{eachItem.installmentInterest}%</td>
                                     <td>R${eachItem.installmentValue}</td>
@@ -70,7 +70,7 @@ export default function LendingCalc(){
         setTab(cat);
         setTableName(nam);
         let tableData = (_.find(tables,{id:cat}));
-        setFooterData(Object(_.find(tableData?.installments,{id:each})));
+        setFooterData(Object(_.find(tableData?.installments,{installments:each})));
     };
 
     function updateTableData(num: number){
